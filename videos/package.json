@@ -1,0 +1,22 @@
+{
+  "name": "capacitacion-odoo-videos",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "tts": "node scripts/tts.mjs",
+    "studio": "remotion studio src/index.ts",
+    "render:video1": "remotion render src/index.ts Video1Cotizacion out/video1-crear-confirmar-cotizacion.mp4",
+    "render:podcast1": "remotion render src/index.ts Podcast1Confirmamos out/podcast1-lo-confirmamos.mp4 && remotion render src/index.ts Podcast1Confirmamos out/podcast1-lo-confirmamos.mp3 --codec=mp3"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.538",
+    "msedge-tts": "^2.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.538"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
