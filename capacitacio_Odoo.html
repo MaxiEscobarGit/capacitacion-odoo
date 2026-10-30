@@ -187,6 +187,14 @@
                                 <li><i class="fas fa-check text-green-500 mr-2"></i> Favoritos personales, compartidos y predeterminados</li>
                             </ul>
                         </div>
+                        <div class="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition cursor-pointer border-t-4 border-transparent hover:border-odoo md:flex md:items-center gap-8" style="grid-column:1 / -1" onclick="navigate('training', 'sales-eval')">
+                            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6 md:mb-0 flex-shrink-0"><i class="fas fa-clipboard-check text-2xl text-odoo"></i></div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-odoo">Cierre · ~8 min</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2 mt-1">Evaluación final</h3>
+                                <p class="text-gray-600">Al terminar los bloques, contanos qué aprendiste y qué mejorarías. Es un formulario corto.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -255,6 +263,9 @@
                                     <a href="#b4-paso-4" class="block py-1 text-gray-500 hover:text-odoo">4. Buscá escribiendo</a>
                                     <a href="#b4-practica" class="block py-1 font-semibold text-green-700 hover:text-green-800">✓ Práctica</a>
                                 </div>
+                                <button onclick="showContent('sales-eval')" id="nav-sales-eval" class="nav-item w-full text-left px-3 py-2 text-sm font-medium rounded-md text-gray-600 hover:text-odoo hover:bg-purple-50">
+                                    <i class="fas fa-clipboard-check mr-1"></i> Evaluación final
+                                </button>
                             </div>
                         </div>
                     </nav>
@@ -505,33 +516,6 @@
                             </div>
                         </div>
 
-                        <!-- Video + podcast -->
-                        <div class="grid md:grid-cols-2 gap-4 mb-10">
-                            <div class="bg-white border border-gray-200 rounded-xl p-4">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <i class="fas fa-play-circle text-odoo text-lg"></i>
-                                    <h3 class="font-bold text-gray-900">Video: crear y confirmar una cotización</h3>
-                                </div>
-                                <video controls preload="metadata" class="rounded-lg" style="width:100%;background:#000">
-                                    <source src="media/bloque1/video-crear-confirmar-cotizacion.mp4#t=3" type="video/mp4">
-                                    Tu navegador no puede reproducir este video.
-                                </video>
-                                <p class="text-xs text-gray-500 mt-2">~3 min · Todo el paso a paso de este bloque, en Odoo.</p>
-                            </div>
-                            <div class="bg-white border border-gray-200 rounded-xl p-4">
-                                <div class="flex items-center gap-2 mb-3">
-                                    <i class="fas fa-headphones text-odoo text-lg"></i>
-                                    <h3 class="font-bold text-gray-900">Podcast: ¿Lo confirmamos?</h3>
-                                </div>
-                                <p class="text-sm text-gray-600 mb-3">Dos compañeros charlan sobre qué revisar antes de confirmar una cotización. Ideal para escuchar en cualquier momento.</p>
-                                <audio controls preload="metadata" style="width:100%">
-                                    <source src="media/bloque1/podcast-lo-confirmamos.mp3" type="audio/mpeg">
-                                    Tu navegador no puede reproducir este audio.
-                                </audio>
-                                <p class="text-xs text-gray-500 mt-2">~3 min · Regla práctica: cliente, productos, cantidades y total.</p>
-                            </div>
-                        </div>
-
                         <!-- PASO 1 -->
                         <div id="paso-1" class="scroll-mt-24 mb-12">
                             <div class="flex items-center gap-3 mb-3">
@@ -684,6 +668,37 @@
                             <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
                             <div id="quiz" class="space-y-5"></div>
                             <div id="quiz-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
+                        </div>
+
+                        <!-- Video + podcast -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
+                            <p class="text-sm text-gray-500 mb-4">Miralo o escuchalo cuando quieras para recordar el procedimiento.</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-play-circle text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Video: crear y confirmar una cotización</h3>
+                                    </div>
+                                    <video controls preload="metadata" class="rounded-lg" style="width:100%;background:#000">
+                                        <source src="media/bloque1/video-crear-confirmar-cotizacion.mp4#t=3" type="video/mp4">
+                                        Tu navegador no puede reproducir este video.
+                                    </video>
+                                    <p class="text-xs text-gray-500 mt-2">~3 min · Todo el paso a paso de este bloque, en Odoo.</p>
+                                </div>
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-headphones text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Podcast: ¿Lo confirmamos?</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mb-3">Dos compañeros charlan sobre qué revisar antes de confirmar una cotización. Ideal para escuchar en cualquier momento.</p>
+                                    <audio controls preload="metadata" style="width:100%">
+                                        <source src="media/bloque1/podcast-lo-confirmamos.mp3" type="audio/mpeg">
+                                        Tu navegador no puede reproducir este audio.
+                                    </audio>
+                                    <p class="text-xs text-gray-500 mt-2">~3 min · Regla práctica: cliente, productos, cantidades y total.</p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Cierre -->
@@ -867,6 +882,37 @@
                             <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
                             <div id="quiz-2" class="space-y-5"></div>
                             <div id="quiz-2-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
+                        </div>
+
+                        <!-- Video + podcast -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
+                            <p class="text-sm text-gray-500 mb-4">Miralo o escuchalo cuando quieras para recordar el procedimiento.</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-play-circle text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Video: control y disponibilidad de stock</h3>
+                                    </div>
+                                    <video controls preload="metadata" class="rounded-lg" style="width:100%;background:#000">
+                                        <source src="media/bloque2/video.mp4#t=3" type="video/mp4">
+                                        Tu navegador no puede reproducir este video.
+                                    </video>
+                                    <p class="text-xs text-gray-500 mt-2">~1,5 min · Cómo leer el stock de cada línea, en Odoo.</p>
+                                </div>
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-headphones text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Podcast del bloque</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mb-3">Una charla corta para repasar el stock y los plazos de entrega. Ideal para escuchar en cualquier momento.</p>
+                                    <audio controls preload="metadata" style="width:100%">
+                                        <source src="media/bloque2/podcast.mp3" type="audio/mpeg">
+                                        Tu navegador no puede reproducir este audio.
+                                    </audio>
+                                    <p class="text-xs text-gray-500 mt-2">~1,5 min</p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Cierre -->
@@ -1078,6 +1124,37 @@
                             <div id="quiz-3-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
+                        <!-- Video + podcast -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
+                            <p class="text-sm text-gray-500 mb-4">Miralo o escuchalo cuando quieras para recordar el procedimiento.</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-play-circle text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Video: trazabilidad y seguimiento de órdenes</h3>
+                                    </div>
+                                    <video controls preload="metadata" class="rounded-lg" style="width:100%;background:#000">
+                                        <source src="media/bloque3/video.mp4#t=3" type="video/mp4">
+                                        Tu navegador no puede reproducir este video.
+                                    </video>
+                                    <p class="text-xs text-gray-500 mt-2">~1 min · Cómo seguir el estado de cada venta, en Odoo.</p>
+                                </div>
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-headphones text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Podcast del bloque</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mb-3">Una charla para repasar cómo seguir cada venta. Ideal para escuchar en cualquier momento.</p>
+                                    <audio controls preload="metadata" style="width:100%">
+                                        <source src="media/bloque3/podcast.mp3" type="audio/mpeg">
+                                        Tu navegador no puede reproducir este audio.
+                                    </audio>
+                                    <p class="text-xs text-gray-500 mt-2">~5 min</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Cierre -->
                         <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
                             <h4 class="text-lg font-bold text-gray-800 mb-2">Bloque 3 completo</h4>
@@ -1275,12 +1352,87 @@
                             <div id="quiz-4-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
+                        <!-- Video + podcast -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
+                            <p class="text-sm text-gray-500 mb-4">Miralo o escuchalo cuando quieras para recordar el procedimiento.</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-play-circle text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Video: criterios de búsqueda y consulta</h3>
+                                    </div>
+                                    <video controls preload="metadata" class="rounded-lg" style="width:100%;background:#000">
+                                        <source src="media/bloque4/video.mp4#t=3" type="video/mp4">
+                                        Tu navegador no puede reproducir este video.
+                                    </video>
+                                    <p class="text-xs text-gray-500 mt-2">~2 min · Cómo buscar, filtrar y guardar favoritos, en Odoo.</p>
+                                </div>
+                                <div class="bg-white border border-gray-200 rounded-xl p-4">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <i class="fas fa-headphones text-odoo text-lg"></i>
+                                        <h3 class="font-bold text-gray-900">Podcast del bloque</h3>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mb-3">Una charla para repasar las búsquedas y los favoritos. Ideal para escuchar en cualquier momento.</p>
+                                    <audio controls preload="metadata" style="width:100%">
+                                        <source src="media/bloque4/podcast.mp3" type="audio/mpeg">
+                                        Tu navegador no puede reproducir este audio.
+                                    </audio>
+                                    <p class="text-xs text-gray-500 mt-2">~4 min</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Cierre -->
                         <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
                             <h4 class="text-lg font-bold text-gray-800 mb-2">Bloque 4 completo</h4>
-                            <p class="text-gray-600 mb-4">Ya sabés buscar, filtrar, agrupar y guardar tus búsquedas. Con esto completaste la capacitación de Ventas.</p>
+                            <p class="text-gray-600 mb-4">Ya sabés buscar, filtrar, agrupar y guardar tus búsquedas. Lo último: contanos cómo te fue en la evaluación final.</p>
                             <div class="flex justify-center gap-3 flex-wrap">
                                 <button onclick="showContent('sales-tracking')" class="inline-flex items-center text-gray-500 hover:text-gray-800 px-4 py-3 font-medium transition"><i class="fas fa-arrow-left mr-2"></i> Bloque 3</button>
+                                <button onclick="showContent('sales-eval')" class="inline-flex items-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition shadow-md">
+                                    Continuar: Evaluación final <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============ EVALUACIÓN FINAL ============ -->
+                    <div id="content-sales-eval" class="content-section hidden fade-in">
+
+                        <!-- Header -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center shadow-inner flex-shrink-0">
+                                <i class="fas fa-clipboard-check text-3xl text-odoo"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1 block">Cierre · Módulo de Ventas · ~8 min</span>
+                                <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900">Evaluación final</h1>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-white border border-purple-100 rounded-xl p-5 mb-8">
+                            <p class="text-gray-700"><strong>¡Llegaste al final!</strong> Antes de terminar, completá este formulario. Nos sirve para saber si la capacitación te ayudó y qué tenemos que mejorar.</p>
+                        </div>
+
+                        <div class="grid md:grid-cols-3 gap-3 text-sm mb-10">
+                            <div class="border border-gray-200 rounded-lg p-4"><i class="fas fa-question-circle text-odoo mr-2"></i><strong>11 preguntas cortas</strong><br><span class="text-gray-600">2 o 3 por bloque, para ver qué temas quedaron claros. No es un examen con nota.</span></div>
+                            <div class="border border-gray-200 rounded-lg p-4"><i class="fas fa-chart-line text-odoo mr-2"></i><strong>Antes y después</strong><br><span class="text-gray-600">Qué tan seguro/a te sentías con cada tarea y cómo te sentís ahora.</span></div>
+                            <div class="border border-gray-200 rounded-lg p-4"><i class="fas fa-comment-dots text-odoo mr-2"></i><strong>Tu opinión</strong><br><span class="text-gray-600">Qué te sirvió, qué te sigue costando y qué tema agregarías.</span></div>
+                        </div>
+
+                        <div class="text-center mb-10">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeo-YRwRc768DCAV1h_kurx5tLGXBjyjwIn4ITdryd2OoHicg/viewform?usp=publish-editor" target="_blank" rel="noopener" class="inline-flex items-center bg-odoo hover-bg-odoo text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition">
+                                <i class="fas fa-clipboard-check mr-2"></i> Hacer la evaluación final <i class="fas fa-external-link-alt ml-3 text-sm"></i>
+                            </a>
+                            <p class="text-xs text-gray-500 mt-3">Se abre en una pestaña nueva (Google Forms). Tarda unos 8 minutos.</p>
+                        </div>
+
+                        <!-- Cierre -->
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">¡Gracias por hacer la capacitación!</h4>
+                            <p class="text-gray-600 mb-4">Podés volver a cualquier bloque cuando lo necesites para repasar.</p>
+                            <div class="flex justify-center gap-3 flex-wrap">
+                                <button onclick="showContent('sales-search')" class="inline-flex items-center text-gray-500 hover:text-gray-800 px-4 py-3 font-medium transition"><i class="fas fa-arrow-left mr-2"></i> Bloque 4</button>
                                 <button onclick="navigate('home')" class="inline-flex items-center bg-odoo hover-bg-odoo text-white px-6 py-3 rounded-lg font-medium transition shadow-md">
                                     <i class="fas fa-home mr-2"></i> Volver al Inicio
                                 </button>
