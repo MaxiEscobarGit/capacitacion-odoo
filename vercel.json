@@ -1,0 +1,9 @@
+{
+  "rewrites": [{ "source": "/", "destination": "/capacitacio_Odoo.html" }],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}
