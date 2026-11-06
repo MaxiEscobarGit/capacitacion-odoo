@@ -1,0 +1,58 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:05.500
+Las columnas que se muestran en la lista
+de órdenes de venta son personalizables.
+
+2
+00:00:05.500 --> 00:00:09.500
+En este caso tenemos Estado, Estado de la
+entrega y Estado de la factura.
+
+3
+00:00:09.500 --> 00:00:19.500
+Si entramos a una orden que todavía es una
+cotización y enviamos esa cotización al
+cliente por correo electrónico,
+
+4
+00:00:19.500 --> 00:00:26.500
+veremos que esta cotización pasa a ser una
+cotización enviada.
+
+5
+00:00:26.500 --> 00:00:31.500
+Podemos corroborarlo en la barra de estado
+de la orden.
+
+6
+00:00:31.500 --> 00:00:37.500
+Asimismo, se ve reflejado en el historial
+de la orden que se envió la cotización al
+cliente.
+
+7
+00:00:37.500 --> 00:00:45.500
+Una vez que se confirma esta cotización,
+pasa al estado de orden de venta.
+
+8
+00:00:45.500 --> 00:00:53.500
+Por eso podemos ver cuánto falta para la
+entrega de este pedido.
+
+9
+00:00:53.500 --> 00:00:58.500
+Si ahora ingresamos a una cotización y la
+cancelamos,
+
+10
+00:00:58.500 --> 00:01:04.500
+veremos que se agrega un nuevo estado en
+la barra de estado, que dice Cancelado.
+
+11
+00:01:04.500 --> 00:01:08.500
+Y esta misma acción se verá reflejada en
+el historial de la orden.

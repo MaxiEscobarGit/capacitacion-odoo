@@ -1,0 +1,104 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:03.398
+En este bloque vemos cómo controlar el
+stock.
+
+2
+00:00:03.398 --> 00:00:07.429
+Desde Ventas hacemos clic en Nuevo para
+empezar una cotización.
+
+3
+00:00:07.429 --> 00:00:09.984
+El cliente queda como Consumidor Final.
+
+4
+00:00:09.984 --> 00:00:13.145
+Ahora buscamos el primer producto por su
+código.
+
+5
+00:00:13.145 --> 00:00:16.500
+Odoo nos va a mostrar una advertencia del
+producto,
+
+6
+00:00:16.500 --> 00:00:23.591
+la vamos a leer y la vamos a cerrar. En
+cantidad vamos a colocar el número 2.
+
+7
+00:00:23.591 --> 00:00:27.233
+Fijémonos que la línea está completamente
+en rojo:
+
+8
+00:00:27.233 --> 00:00:32.500
+eso significa que la cantidad disponible
+del producto en toda la empresa es 0.
+
+9
+00:00:32.500 --> 00:00:35.409
+No hay en ninguna sucursal y hay que
+comprarlo.
+
+10
+00:00:35.409 --> 00:00:39.045
+Vamos a agregar un segundo producto,
+buscándolo por código,
+
+11
+00:00:39.045 --> 00:00:42.629
+y cargamos 28 unidades. Esta vez la línea
+no está toda roja,
+
+12
+00:00:42.629 --> 00:00:45.162
+pero la montañita sí. Hacemos clic en
+ella:
+
+13
+00:00:45.162 --> 00:00:48.040
+nos muestra que en nuestra sucursal no hay
+stock,
+
+14
+00:00:48.040 --> 00:00:52.700
+pero el detalle por ubicación muestra 25
+unidades en otras sucursales,
+
+15
+00:00:52.700 --> 00:00:55.633
+que hay que traer. Si no tenemos el
+código,
+
+16
+00:00:55.633 --> 00:01:00.984
+podemos usar Buscar más, donde se abre el
+listado de productos,
+
+17
+00:01:00.984 --> 00:01:04.500
+y hacemos la búsqueda del que queramos.
+
+18
+00:01:04.500 --> 00:01:12.500
+Vamos a elegir un producto y cargamos 8
+unidades,
+
+19
+00:01:12.500 --> 00:01:18.791
+y la montañita se ve de color verde:
+quiere decir que hay 18 unidades en
+nuestra
+
+20
+00:01:18.791 --> 00:01:23.847
+sucursal y se entrega de inmediato. Y con
+estos colores ya sabés qué plazo
+
+21
+00:01:23.847 --> 00:01:25.300
+prometerle al cliente.
