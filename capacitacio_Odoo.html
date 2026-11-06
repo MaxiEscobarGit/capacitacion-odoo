@@ -66,6 +66,13 @@
         /* Bloque 0: letra un poco más grande para quien recién empieza */
         .b0 { font-size: 1.0625rem; }
         .b0 .text-sm { font-size: .95rem; line-height: 1.5rem; }
+        /* Botón flotante de consultas */
+        .help-fab { position: fixed; right: 1rem; bottom: 1rem; z-index: 40; display: flex; align-items: center; gap: .5rem;
+            background: #714B67; color: #fff; padding: .7rem 1rem; border-radius: 9999px; font-weight: 600; font-size: .9rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,.25); transition: background .2s, transform .2s; }
+        .help-fab:hover { background: #5c3d54; transform: translateY(-2px); }
+        @media (max-width: 640px) { .help-fab span { display: none; } .help-fab { padding: .9rem; } }
+
         /* Menú lateral con su propia barra de desplazamiento */
         @media (min-width: 768px) {
             .sidebar-scroll { max-height: calc(100vh - 4rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c4b5d0 transparent; }
@@ -1457,9 +1464,15 @@
 
     <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500">
+            <p class="mb-2"><i class="fas fa-envelope text-odoo mr-1"></i> ¿Te quedó alguna duda? Escribinos a <a href="mailto:Odootrainers@gmail.com?subject=Consulta%20capacitaci%C3%B3n%20Odoo%20Ventas" class="text-odoo font-semibold hover:underline">Odootrainers@gmail.com</a></p>
             &copy; 2026 Equipo Capacitador. Creado para entrenamiento interno.
         </div>
     </footer>
+
+    <!-- Botón flotante de consultas -->
+    <a href="mailto:Odootrainers@gmail.com?subject=Consulta%20capacitaci%C3%B3n%20Odoo%20Ventas" class="help-fab" title="Escribinos a Odootrainers@gmail.com">
+        <i class="fas fa-envelope"></i><span>¿Dudas? Escribinos</span>
+    </a>
 
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close" onclick="closeModal()">&times;</span>
