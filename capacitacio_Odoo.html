@@ -66,6 +66,13 @@
         /* Bloque 0: letra un poco más grande para quien recién empieza */
         .b0 { font-size: 1.0625rem; }
         .b0 .text-sm { font-size: .95rem; line-height: 1.5rem; }
+        /* Menú lateral con su propia barra de desplazamiento */
+        @media (min-width: 768px) {
+            .sidebar-scroll { max-height: calc(100vh - 4rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #c4b5d0 transparent; }
+            .sidebar-scroll::-webkit-scrollbar { width: 8px; }
+            .sidebar-scroll::-webkit-scrollbar-thumb { background: #c4b5d0; border-radius: 9999px; }
+            .sidebar-scroll::-webkit-scrollbar-thumb:hover { background: #714B67; }
+        }
         .b0 .pin { width: 24px; height: 24px; font-size: 12px; border-width: 2px; }
         @media (min-width: 768px) { .md\:items-center { align-items: center; } .md\:mb-0 { margin-bottom: 0; } }
     </style>
@@ -204,7 +211,7 @@
         <div id="page-training" class="hidden flex-grow flex flex-col md:flex-row bg-gray-100 w-full">
 
             <aside class="w-full md:w-64 bg-white shadow-lg md:min-h-screen flex-shrink-0">
-                <div class="p-6 md:sticky md:top-16">
+                <div class="p-6 md:sticky md:top-16 sidebar-scroll">
                     <h2 class="text-xs uppercase text-gray-400 font-bold tracking-wider mb-4">Contenido del Curso</h2>
                     <nav class="space-y-1">
                         <div class="mb-4">
@@ -660,14 +667,6 @@
                             </div>
                         </div>
 
-                        <!-- QUIZ -->
-                        <div class="mb-10">
-                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
-                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
-                            <div id="quiz" class="space-y-5"></div>
-                            <div id="quiz-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
-                        </div>
-
                         <!-- Video + podcast -->
                         <div class="mb-10">
                             <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
@@ -697,6 +696,14 @@
                                     <p class="text-xs text-gray-500 mt-2">~3 min · Regla práctica: cliente, productos, cantidades y total.</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- QUIZ -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
+                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
+                            <div id="quiz" class="space-y-5"></div>
+                            <div id="quiz-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
                         <!-- Cierre -->
@@ -874,14 +881,6 @@
                             </div>
                         </div>
 
-                        <!-- QUIZ -->
-                        <div class="mb-10">
-                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
-                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
-                            <div id="quiz-2" class="space-y-5"></div>
-                            <div id="quiz-2-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
-                        </div>
-
                         <!-- Video + podcast -->
                         <div class="mb-10">
                             <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
@@ -911,6 +910,14 @@
                                     <p class="text-xs text-gray-500 mt-2">~1,5 min</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- QUIZ -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
+                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
+                            <div id="quiz-2" class="space-y-5"></div>
+                            <div id="quiz-2-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
                         <!-- Cierre -->
@@ -1114,14 +1121,6 @@
                             </div>
                         </div>
 
-                        <!-- QUIZ -->
-                        <div class="mb-10">
-                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
-                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
-                            <div id="quiz-3" class="space-y-5"></div>
-                            <div id="quiz-3-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
-                        </div>
-
                         <!-- Video + podcast -->
                         <div class="mb-10">
                             <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
@@ -1151,6 +1150,14 @@
                                     <p class="text-xs text-gray-500 mt-2">~5 min</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- QUIZ -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
+                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
+                            <div id="quiz-3" class="space-y-5"></div>
+                            <div id="quiz-3-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
                         <!-- Cierre -->
@@ -1342,14 +1349,6 @@
                             </div>
                         </div>
 
-                        <!-- QUIZ -->
-                        <div class="mb-10">
-                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
-                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
-                            <div id="quiz-4" class="space-y-5"></div>
-                            <div id="quiz-4-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
-                        </div>
-
                         <!-- Video + podcast -->
                         <div class="mb-10">
                             <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-film text-odoo mr-2"></i>Repasá el bloque</h2>
@@ -1379,6 +1378,14 @@
                                     <p class="text-xs text-gray-500 mt-2">~4 min</p>
                                 </div>
                             </div>
+                        </div>
+
+                        <!-- QUIZ -->
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-bolt text-yellow-400 mr-2"></i>3 preguntas rápidas</h2>
+                            <p class="text-sm text-gray-500 mb-4">Sin nota. Es para que te quede.</p>
+                            <div id="quiz-4" class="space-y-5"></div>
+                            <div id="quiz-4-score" class="hidden mt-4 text-center font-bold text-odoo"></div>
                         </div>
 
                         <!-- Cierre -->
